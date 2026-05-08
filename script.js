@@ -49,7 +49,7 @@ const translations = {
     tangerineTitle: "Tangerine",
     tangerineText: "Citrus snap for an easy chill.",
     pinkTitle: "Pink Lady",
-    pinkText: "နူးညံ့ပြီး သောက်လွယ်",
+    pinkText: "Soft, smooth, and easy to enjoy.",
     contactEyebrow: "Trade and orders",
     contactTitle: "Ready for customers, shops, and events.",
     phoneLabel: "Phone",

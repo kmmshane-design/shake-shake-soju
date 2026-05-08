@@ -348,6 +348,7 @@ html[lang="my"] .flavor-card span {
   position: relative;
   min-height: clamp(28rem, 56vw, 43rem);
   isolation: isolate;
+  perspective: 1100px;
   transform-style: preserve-3d;
 }
 
@@ -373,6 +374,7 @@ html[lang="my"] .flavor-card span {
   border-radius: 8px;
   background: var(--paper);
   box-shadow: var(--shadow);
+  will-change: transform, opacity;
 }
 
 .hero-card img {
@@ -383,19 +385,23 @@ html[lang="my"] .flavor-card span {
 
 .hero-card-main {
   inset: 4% 10% 6% 10%;
+  z-index: 2;
   transform: rotate(-2deg);
+  animation: heroMainDrift 9s ease-in-out infinite;
 }
 
 .hero-card-float {
   width: min(35%, 14rem);
   aspect-ratio: 4 / 5;
-  animation: floatCard 6.5s ease-in-out infinite;
+  z-index: 3;
+  animation: floatCard 7.2s ease-in-out infinite;
 }
 
 .hero-card-top {
   top: 0;
   right: 0;
   transform: rotate(6deg);
+  animation-delay: -1.2s;
 }
 
 .hero-card-bottom {
@@ -403,6 +409,15 @@ html[lang="my"] .flavor-card span {
   bottom: 0;
   transform: rotate(-7deg);
   animation-delay: -2.4s;
+}
+
+.hero-card-side {
+  right: 5%;
+  bottom: 18%;
+  z-index: 1;
+  width: min(30%, 12rem);
+  transform: rotate(4deg) scale(0.94);
+  animation-delay: -3.8s;
 }
 
 .motion-caption {
@@ -822,10 +837,22 @@ html[lang="my"] .contact-item strong {
 @keyframes floatCard {
   0%,
   100% {
+    opacity: 0.96;
     translate: 0 0;
   }
   50% {
-    translate: 0 -0.75rem;
+    opacity: 1;
+    translate: 0 -0.85rem;
+  }
+}
+
+@keyframes heroMainDrift {
+  0%,
+  100% {
+    transform: rotate(-2deg) scale(1);
+  }
+  50% {
+    transform: rotate(-1deg) scale(1.018);
   }
 }
 
@@ -914,11 +941,11 @@ html[lang="my"] .contact-item strong {
   }
 
   .hero-stage {
-    min-height: clamp(23rem, 92vw, 33rem);
+    min-height: clamp(24rem, 102vw, 34rem);
   }
 
   .hero-card-main {
-    inset: 5% 4% 8% 4%;
+    inset: 6% 6% 13% 6%;
   }
 
   .serve-media-main {
@@ -932,12 +959,28 @@ html[lang="my"] .contact-item strong {
   }
 
   .hero-card-float {
-    width: 31%;
+    width: 32%;
+  }
+
+  .hero-card-top {
+    top: 1%;
+    right: 2%;
+  }
+
+  .hero-card-bottom {
+    left: 2%;
+    bottom: 4%;
+  }
+
+  .hero-card-side {
+    right: 1%;
+    bottom: 21%;
+    width: 30%;
   }
 
   .motion-caption {
     right: 6%;
-    bottom: 7%;
+    bottom: 5%;
     min-width: 9.5rem;
   }
 
@@ -976,9 +1019,30 @@ html[lang="my"] .contact-item strong {
 }
 
 @media (max-width: 420px) {
-  .hero-card-top,
+  .hero-stage {
+    min-height: clamp(23rem, 122vw, 30rem);
+  }
+
+  .hero-card-main {
+    inset: 8% 5% 18% 5%;
+  }
+
+  .hero-card-top {
+    width: 34%;
+    top: 2%;
+    right: 1%;
+  }
+
   .hero-card-bottom {
-    display: none;
+    width: 34%;
+    left: 1%;
+    bottom: 7%;
+  }
+
+  .hero-card-side {
+    width: 31%;
+    right: 0;
+    bottom: 26%;
   }
 
   .serve-media {
@@ -999,6 +1063,8 @@ html[lang="my"] .contact-item strong {
   .motion-caption {
     left: 1rem;
     right: 1rem;
+    bottom: 0.75rem;
+    min-width: 0;
   }
 }
 
