@@ -1,190 +1,227 @@
 <!doctype html>
-<html lang="my">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Shake Shake Premium Korean Soju from Taunggyi Aye Thar Yar. Ready-to-drink fruit soju with fair price, no extra mixer needed."
+      content="Shake Shake Premium Soju from Taunggyi Aye Thar Yar. Ready-to-drink fruit soju with no extra mixer needed."
     />
-    <title>Shake Shake Premium Korean Soju</title>
+    <title>Shake Shake Premium Soju</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800;900&family=Noto+Sans+Myanmar:wght@500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand-lockup" href="#" aria-label="Shake Shake Premium Korean Soju home">
-        <img
-          src="./Logo.JPG"
-          alt="Shake Shake Premium Korean Soju logo"
-          width="424"
-          height="360"
-        />
-        <span class="brand-copy">
+      <a class="brand-lockup" href="#" aria-label="Shake Shake Premium Soju home">
+        <img src="./assets/shake-shake-logo-transparent-small.png" alt="Shake Shake logo" width="240" height="120" />
+        <span>
           <strong>Premium Soju</strong>
-          <small>Taunggyi(Aye Thar Yar)</small>
+          <small data-i18n="brandLocation">Taunggyi | Aye Thar Yar</small>
         </span>
       </a>
 
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#flavors">Flavors</a>
-        <a href="#story">Story</a>
-        <a href="#contact">Contact</a>
-        <a href="#order">Order</a>
-      </nav>
+      <div class="header-actions">
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#flavors" data-i18n="navFlavors">Flavors</a>
+          <a href="#serve" data-i18n="navServe">Serve</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+          <a href="#order" data-i18n="navOrder">Order</a>
+        </nav>
+        <div class="language-switcher" aria-label="Language choice">
+          <button class="language-option is-active" type="button" data-lang="en">English</button>
+          <button class="language-option" type="button" data-lang="my">မြန်မာ</button>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Made in Taunggyi (Aye Thar Yar)</p>
-          <h1 id="hero-title">Shake Shake</h1>
-          <p class="hero-lede">
-            Premium soju ကို fair price နဲ့။ Mixer ထပ်မလိုဘဲ ရေခဲလေးပဲထည့်ပြီး Shake Shake အတိုင်း chill လို့ရအောင်
-            ရောစပ်ထားပါတယ်။
+          <p class="eyebrow" data-i18n="heroEyebrow">Ready mixed fruit soju</p>
+          <h1 id="hero-title" data-i18n="heroTitle">Shake Shake, then chill.</h1>
+          <p class="hero-lede" data-i18n="heroLede">
+            A bright, easy premium soju made for after-work tables, house parties, and relaxed nights with friends.
+            Serve cold, add ice, and enjoy without extra mixer.
           </p>
           <div class="hero-actions" aria-label="Main actions">
-            <a class="button button-primary" href="#flavors">View Flavors</a>
-            <a class="button button-ghost" href="#order">Order / Enquiry</a>
+            <a class="button button-primary" href="#flavors" data-i18n="heroPrimary">Explore Flavors</a>
+            <a class="button button-ghost" href="#order" data-i18n="heroSecondary">Order Now</a>
           </div>
-          <p class="legal-note">Legal drinking age only. Drink responsibly.</p>
+          <p class="legal-note" data-i18n="legalNote">Legal drinking age only. Drink responsibly.</p>
         </div>
 
-        <div class="motion-stage reveal" aria-label="Animated Shake Shake product photos">
-          <div class="motion-frame">
-            <img class="reel-shot shot-one" src="./SS%20Flavors-Combi%20-3.jpg" alt="Shake Shake soju flavor lineup" />
-            <img class="reel-shot shot-two" src="./SS%20Flavors-Combi%20-4.jpg" alt="Shake Shake fruit soju bottles" />
-            <img class="reel-shot shot-three" src="./SS-Tangarine-1.jpg" alt="Shake Shake tangerine soju pour" />
-            <div class="motion-caption">
-              <span>No mixer</span>
-              <strong>Just ice</strong>
-            </div>
+        <div class="hero-stage reveal" aria-label="Animated Shake Shake product showcase">
+          <div class="hero-orbit" aria-hidden="true"></div>
+          <figure class="hero-card hero-card-main">
+            <img src="./assets/motion-combi.webp" alt="Shake Shake soju bottles with fruit and ice" />
+          </figure>
+          <figure class="hero-card hero-card-float hero-card-top">
+            <img src="./assets/motion-pink.webp" alt="Shake Shake pink soju flavor bottle" />
+          </figure>
+          <figure class="hero-card hero-card-float hero-card-bottom">
+            <img src="./assets/motion-mango.webp" alt="Shake Shake mango soju flavor bottle" />
+          </figure>
+          <div class="motion-caption">
+            <span data-i18n="captionSmall">No mixer needed</span>
+            <strong data-i18n="captionStrong">Just ice</strong>
           </div>
         </div>
       </section>
 
       <section class="marquee-band" aria-label="Brand highlights">
         <div class="marquee-track">
-          <span>Fair Price</span>
-          <span>No Mixer Needed</span>
-          <span>Serve Cold</span>
-          <span>Five Flavors</span>
-          <span>Ready To Chill</span>
-          <span>Made In Aye Thar Yar</span>
-          <span>Fair Price</span>
-          <span>No Mixer Needed</span>
-          <span>Serve Cold</span>
-          <span>Five Flavors</span>
-          <span>Ready To Chill</span>
-          <span>Made In Aye Thar Yar</span>
+          <span data-i18n="marqueePrice">Fair Price</span>
+          <span data-i18n="marqueeMixer">No Mixer Needed</span>
+          <span data-i18n="marqueeCold">Serve Cold</span>
+          <span data-i18n="marqueeFlavors">Five Fruit Flavors</span>
+          <span data-i18n="marqueeChill">Ready To Chill</span>
+          <span data-i18n="marqueeMade">Made In Aye Thar Yar</span>
+          <span data-i18n="marqueePrice">Fair Price</span>
+          <span data-i18n="marqueeMixer">No Mixer Needed</span>
+          <span data-i18n="marqueeCold">Serve Cold</span>
+          <span data-i18n="marqueeFlavors">Five Fruit Flavors</span>
+          <span data-i18n="marqueeChill">Ready To Chill</span>
+          <span data-i18n="marqueeMade">Made In Aye Thar Yar</span>
         </div>
       </section>
 
-      <section class="intro-section" id="story" aria-labelledby="story-title">
+      <section class="story-section" aria-labelledby="story-title">
         <div class="section-copy reveal">
-          <p class="eyebrow">The Vibe</p>
-          <h2 id="story-title">အလုပ်ပြီးလို့ ပင်ပန်းလာတဲ့ညတွေ၊ သူငယ်ချင်းတွေနဲ့ ပေါ့ပေါ့ပါးပါး chill ချင်တဲ့အချိန်တွေအတွက်။</h2>
+          <p class="eyebrow" data-i18n="storyEyebrow">The mood</p>
+          <h2 id="story-title" data-i18n="storyTitle">Commercial enough for the shelf. Easy enough for the night.</h2>
         </div>
         <div class="story-copy reveal">
-          <p>
-            Shake Shake က အရွယ်ရောက်ပြီး လူငယ်တွေ၊ chill drink ကိုလွယ်လွယ်ကူကူသောက်ချင်တဲ့သူတွေ၊ after-work mood
-            ကိုပေါ့ပေါ့ပါးပါးဖြတ်ချင်တဲ့သူတွေအတွက် ထုတ်ထားတဲ့ premium Korean soju ပါ။
+          <p data-i18n="storyOne">
+            Shake Shake is a ready-to-drink fruit soju from Taunggyi (Aye Thar Yar), balanced for a smooth pour and a
+            light social feel.
           </p>
-          <p>
-            Taunggyi (Aye Thar Yar) ကနေ ထုတ်လုပ်ပြီး fruit taste ကို balance လုပ်ထားလို့ mixer မလိုပါဘူး။
-            ရေခဲနဲ့သောက်လည်းကောင်း၊ soju အတိုင်းသောက်လည်းရတဲ့ ready-mixed style ဖြစ်ပါတယ်။
+          <p data-i18n="storyTwo">
+            The format keeps the serve simple: open the bottle, add ice if you like, shake gently, and pour. No extra
+            mixer, no complicated bar setup.
           </p>
         </div>
       </section>
 
-      <section class="product-cinema" aria-label="Shake Shake motion product feature">
-        <div class="cinema-copy reveal">
-          <p class="eyebrow">Ready Mixed</p>
-          <h2>Open. Ice. Shake. Chill.</h2>
-          <p>
-            Mixer ထပ်မလိုအောင် fruit taste ကို balance လုပ်ထားပါတယ်။ Serve cold, add ice, and keep the mood easy.
-          </p>
+      <section class="serve-section" id="serve" aria-labelledby="serve-title">
+        <div class="serve-media reveal">
+          <figure class="serve-media-main">
+            <img src="./assets/cinema-1.webp" alt="Shake Shake full soju flavor lineup" loading="lazy" />
+          </figure>
+          <figure class="serve-media-accent">
+            <img src="./assets/cinema-3.webp" alt="Shake Shake chilled serving shot with glass" loading="lazy" />
+          </figure>
         </div>
-        <div class="cinema-strip reveal">
-          <figure class="cinema-card">
-            <img src="./SS%20Flavors-Combi%20-1.jpg" alt="Shake Shake product mood shot" loading="lazy" />
-          </figure>
-          <figure class="cinema-card">
-            <img src="./SS%20Flavors-Combi%20-5.jpg" alt="Shake Shake flavor bottles" loading="lazy" />
-          </figure>
-          <figure class="cinema-card">
-            <img src="./SS%20Flavors-Combi%20-7.jpg" alt="Shake Shake soju bottle set" loading="lazy" />
-          </figure>
+        <div class="serve-copy reveal">
+          <p class="eyebrow" data-i18n="serveEyebrow">How to serve</p>
+          <h2 id="serve-title" data-i18n="serveTitle">Cold bottle. All flavors. Easy pour.</h2>
+          <div class="serve-steps">
+            <article>
+              <span>01</span>
+              <strong data-i18n="stepOneTitle">Chill</strong>
+              <p data-i18n="stepOneText">Keep every flavor cold for the crispest fruit taste.</p>
+            </article>
+            <article>
+              <span>02</span>
+              <strong data-i18n="stepTwoTitle">Shake</strong>
+              <p data-i18n="stepTwoText">Gently shake before serving to wake up the fruit notes.</p>
+            </article>
+            <article>
+              <span>03</span>
+              <strong data-i18n="stepThreeTitle">Pour</strong>
+              <p data-i18n="stepThreeText">Serve straight or over ice. Mixer is optional.</p>
+            </article>
+          </div>
         </div>
       </section>
 
       <section class="flavor-section" id="flavors" aria-labelledby="flavors-title">
         <div class="section-copy reveal">
-          <p class="eyebrow">Five Flavors</p>
-          <h2 id="flavors-title">Choose your chill.</h2>
+          <p class="eyebrow" data-i18n="flavorsEyebrow">Five flavors</p>
+          <h2 id="flavors-title" data-i18n="flavorsTitle">Pick the color of the night.</h2>
         </div>
 
         <div class="flavor-grid">
-          <article class="flavor-card reveal">
-            <img src="./SS-Grape-1.jpg" alt="Shake Shake grape soju bottle" loading="lazy" />
+          <article class="flavor-card reveal grape">
+            <img src="./assets/flavor-grapes.webp" alt="Shake Shake grape soju bottle" loading="lazy" />
             <div>
-              <p>စပျစ်</p>
-              <span>လန်းဆန်းပြီး သောက်လွယ်။</span>
+              <p data-i18n="grapeTitle">Grape</p>
+              <span data-i18n="grapeText">Fresh, bright, and smooth.</span>
             </div>
           </article>
-          <article class="flavor-card reveal">
-            <img src="./SS-Stawberry-2.jpg" alt="Shake Shake strawberry soju bottle" loading="lazy" />
+          <article class="flavor-card reveal strawberry">
+            <img src="./assets/flavor-strawberry.webp" alt="Shake Shake strawberry soju bottle" loading="lazy" />
             <div>
-              <p>စတော်ဘယ်ရီ</p>
-              <span>ချိုမွှေးပြီး ပေါ့ပါး။</span>
+              <p data-i18n="strawberryTitle">Strawberry</p>
+              <span data-i18n="strawberryText">Soft sweetness with a clean finish.</span>
             </div>
           </article>
-          <article class="flavor-card reveal">
-            <img src="./SS-Mango-2.jpg" alt="Shake Shake mango soju bottle" loading="lazy" />
+          <article class="flavor-card reveal mango">
+            <img src="./assets/flavor-mango.webp" alt="Shake Shake mango soju bottle" loading="lazy" />
             <div>
-              <p>သရက်</p>
-              <span>ချိုဆိမ့်ပြီး နူးညံ့။</span>
+              <p data-i18n="mangoTitle">Mango</p>
+              <span data-i18n="mangoText">Juicy, mellow, and tropical.</span>
             </div>
           </article>
-          <article class="flavor-card reveal">
-            <img src="./SS-Tangarine-2.jpg" alt="Shake Shake tangerine soju bottle" loading="lazy" />
+          <article class="flavor-card reveal tangerine">
+            <img src="./assets/flavor-tangerine.webp" alt="Shake Shake tangerine soju bottle" loading="lazy" />
             <div>
-              <p>လိမ္မော်</p>
-              <span>ချိုချဉ် လန်းဆန်း။</span>
+              <p data-i18n="tangerineTitle">Tangerine</p>
+              <span data-i18n="tangerineText">Citrus snap for an easy chill.</span>
             </div>
           </article>
-          <article class="flavor-card reveal">
-            <img src="./SS-Pink-2.jpg" alt="Shake Shake Pink Lady soju bottle" loading="lazy" />
+          <article class="flavor-card reveal pink">
+            <img src="./assets/flavor-pink-lady.webp" alt="Shake Shake pink lady soju bottle" loading="lazy" />
             <div>
-              <p>ပင့်ခ်လေဒီ</p>
-              <span>Smooth ဖြစ်လို့ Lady တို့အကြိုက်။</span>
+              <p data-i18n="pinkTitle">Pink Lady</p>
+              <span data-i18n="pinkText">Smooth, floral, and party-ready.</span>
             </div>
           </article>
         </div>
       </section>
 
+      <section class="cinema-section" aria-label="Shake Shake product moments">
+        <div class="cinema-track reveal">
+          <figure>
+            <img src="./Public%20Image/SS%20Flavors-Combi%20-6.jpg" alt="Shake Shake soju flavor combination photo" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="./Public%20Image/SS%20Flavors-Combi%20-7.jpg" alt="Shake Shake soju flavor combination photo" loading="lazy" />
+          </figure>
+          <figure>
+            <img src="./Public%20Image/SS%20Flavors-Combi%20-8.jpg" alt="Shake Shake soju flavor combination photo" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div class="section-copy reveal">
-          <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Order and enquiries.</h2>
+          <p class="eyebrow" data-i18n="contactEyebrow">Trade and orders</p>
+          <h2 id="contact-title" data-i18n="contactTitle">Ready for customers, shops, and events.</h2>
         </div>
 
         <div class="contact-grid reveal">
           <a class="contact-item" href="tel:+959761555576">
-            <span>Phone</span>
+            <span data-i18n="phoneLabel">Phone</span>
             <strong>+95 9761555576</strong>
           </a>
           <a class="contact-item" href="mailto:shakeshake.soju1@gmail.com">
-            <span>Gmail</span>
+            <span data-i18n="emailLabel">Email</span>
             <strong>shakeshake.soju1@gmail.com</strong>
           </a>
           <a class="contact-item" href="tel:+959795515039">
-            <span>Telegram &amp; Viber</span>
+            <span data-i18n="telegramLabel">Telegram / Viber</span>
             <strong>+959 795515039</strong>
           </a>
           <a class="contact-item" href="https://www.notion.so/c1ff64e7a9d846c697a1bd6d44c1e546?pvs=106">
-            <span>Order</span>
-            <strong>Order Form</strong>
+            <span data-i18n="orderFormLabel">Order form</span>
+            <strong data-i18n="orderFormText">Open enquiry form</strong>
           </a>
         </div>
       </section>
@@ -192,22 +229,21 @@
       <section class="order-section" id="order" aria-labelledby="order-title">
         <div class="order-panel reveal">
           <div>
-            <p class="eyebrow">Scannable QR</p>
-            <h2 id="order-title">Scan to order Shake Shake.</h2>
-            <p>ဖုန်းနဲ့ scan လုပ်ပြီး order / enquiry form ကိုဖွင့်နိုင်ပါတယ်။</p>
-            <a class="button button-primary order-link" href="https://www.notion.so/c1ff64e7a9d846c697a1bd6d44c1e546?pvs=106">Open Order Form</a>
+            <p class="eyebrow" data-i18n="orderEyebrow">Scan to order</p>
+            <h2 id="order-title" data-i18n="orderTitle">Bring Shake Shake to your next table.</h2>
+            <p data-i18n="orderText">Scan the QR code or open the form for retail, event, and general order enquiries.</p>
+            <a class="button button-primary order-link" href="https://www.notion.so/c1ff64e7a9d846c697a1bd6d44c1e546?pvs=106" data-i18n="orderButton">Open Order Form</a>
           </div>
-          <div class="qr-card" aria-label="Scannable QR code for the Shake Shake order form">
-            <strong>QR Coming Soon</strong>
-            <span>Use the order button to open the form.</span>
-          </div>
+          <a class="qr-card" href="https://www.notion.so/c1ff64e7a9d846c697a1bd6d44c1e546?pvs=106" aria-label="Open Shake Shake order form">
+            <img src="./assets/order-qr.svg" alt="QR code for Shake Shake order form" loading="lazy" />
+          </a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Shake Shake Premium Korean Soju</p>
-      <p>Legal drinking age only. Drink responsibly.</p>
+      <p>Shake Shake Premium Soju</p>
+      <p data-i18n="legalNote">Legal drinking age only. Drink responsibly.</p>
     </footer>
   </body>
 </html>
