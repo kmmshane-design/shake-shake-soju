@@ -123,8 +123,49 @@ const translations = {
   },
 };
 
+const flavorCopy = {
+  en: {
+    grapeTitle: "Grape",
+    grapeText: "Fresh, bright, and smooth.",
+    strawberryTitle: "Strawberry",
+    strawberryText: "Soft sweetness with a clean finish.",
+    mangoTitle: "Mango",
+    mangoText: "Juicy, mellow, and tropical.",
+    tangerineTitle: "Tangerine",
+    tangerineText: "Citrus snap for an easy chill.",
+    pinkTitle: "Pink Lady",
+    pinkText: "Soft, smooth, and easy to enjoy.",
+  },
+  my: {
+    grapeTitle: "စပျစ်",
+    grapeText: "လန်းဆန်းတက်ကြွစေမယ့် အရသာနဲ့ နူးညံ့ချောမွေ့တဲ့ အထိအတွေ့။",
+    strawberryTitle: "စတော်ဘယ်ရီ",
+    strawberryText: "နူးညံ့တဲ့ အချိုဓာတ်နဲ့အတူ သောက်ပြီးတိုင်း ခံတွင်းရှင်းစေမယ့် အရသာ။",
+    mangoTitle: "သရက်",
+    mangoText: "သရက်သီးရဲ့ ပြည့်ဝတဲ့အရသာနဲ့ အပူပိုင်းဒေသရဲ့ လန်းဆန်းမှုကို အပြည့်အဝပေးစွမ်းမှာပါ။",
+    tangerineTitle: "လိမ္မော်",
+    tangerineText: "လိမ္မော်သီးရဲ့ ချဉ်ပြုံးပြုံးအရသာလေးနဲ့ အေးအေးဆေးဆေး Chill လို့ အကောင်းဆုံးပဲ။",
+    pinkTitle: "Pink Lady",
+    pinkText: "နူးညံ့ချောမွေ့ပြီး ဘယ်လိုအချိန်မျိုးမှာမဆို ပေါ့ပေါ့ပါးပါး သုံးဆောင်နိုင်ပါတယ်။",
+  },
+};
+
+const storyCopy = {
+  my: {
+    storyTitle: "ဆိုင်တင်ရောင်းချရန် အကောင်းဆုံးအရည်အသွေး၊ ညဘက် Chill ဖို့ အလွယ်ကူဆုံး အစီအစဉ်",
+    storyOne:
+      "Shake Shake ဆိုတာ တောင်ကြီး (အေးသာယာ) ကနေ ထုတ်လုပ်ထားတဲ့ အသင့်သောက်သုံးနိုင်သော သစ်သီးအရသာ Soju ဖြစ်ပါတယ်။ သူငယ်ချင်းတွေနဲ့ ဆုံတဲ့အခါမျိုးမှာ ပေါ့ပေါ့ပါးပါးနဲ့ အကောင်းဆုံး အရသာကို ခံစားနိုင်ဖို့ သေချာဖန်တီးထားပါတယ်။",
+    storyTwo:
+      "သုံးဆောင်ရတာ အလွန်လွယ်ကူပါတယ်။ ပုလင်းကိုဖွင့်၊ နှစ်သက်ရင် ရေခဲလေးထည့်၊ ခပ်ဖွဖွလေး လှုပ် (Shake) ပြီးတာနဲ့ တန်းငှဲ့သောက်လို့ ရပါပြီ။ အခြား Mixer တွေ ထပ်ရောစရာ မလိုသလို၊ ရှုပ်ထွေးတဲ့ ပြင်ဆင်မှုတွေလည်း ဘာမှ မလိုအပ်ပါဘူး။",
+  },
+};
+
 const setLanguage = (language) => {
-  const copy = translations[language] || translations.en;
+  const copy = {
+    ...(translations[language] || translations.en),
+    ...(storyCopy[language] || {}),
+    ...(flavorCopy[language] || flavorCopy.en),
+  };
 
   translatedItems.forEach((item) => {
     const key = item.dataset.i18n;
