@@ -516,6 +516,20 @@ html[lang="my"] .motion-caption strong {
   margin-bottom: 0;
 }
 
+html[lang="my"] .story-section h2 {
+  max-width: 15.5ch;
+  font-size: clamp(1.45rem, 2.65vw, 2.5rem);
+  line-height: 1.5;
+}
+
+html[lang="my"] .story-copy {
+  gap: 1.15rem;
+}
+
+html[lang="my"] .story-copy p {
+  line-height: 1.95;
+}
+
 .serve-section {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
@@ -662,10 +676,23 @@ html[lang="my"] .contact-item strong {
   line-height: 1.5;
 }
 
+html[lang="my"] .flavor-card p {
+  margin-bottom: 0.45rem;
+  font-size: clamp(1rem, 1.15vw, 1.14rem);
+  line-height: 1.55;
+}
+
 .flavor-card span {
   display: block;
   font-size: 0.9rem;
   line-height: 1.55;
+}
+
+html[lang="my"] .flavor-card span {
+  font-size: clamp(0.92rem, 1.02vw, 1rem);
+  line-height: 1.86;
+  word-break: normal;
+  overflow-wrap: anywhere;
 }
 
 .grape div {
